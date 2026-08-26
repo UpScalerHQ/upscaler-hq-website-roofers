@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/YapgZpEE87fnHWFSfSRe/media/69fb0886247534830e865fd1.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UpScaler HQ - An Extra $100K In 90 Days For Roofing Companies</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    /* Warm near-black — reads like workshop shadow, not tech-blue */
+    --black:      #0a0705;
+    --dark:       #120d08;
+    --surface:    #17100a;
+    --surface2:   #1f160d;
+    --border:     rgba(255,122,24,0.12);
+    --border2:    rgba(255,122,24,0.22);
+    --orange:     #ff7a18;
+    --amber:      #ffab3d;
+    --ember:      #d94f04;
+    --ember-deep: #a3350a;
+    --white:      #fdf6ef;
+    --text-sub:   rgba(245,225,205,0.68);
+    --text-muted: rgba(230,200,170,0.42);
+    --bad:        #f87171;
+    --grad-text: linear-gradient(135deg, #ffab3d 0%, #ff7a18 55%, #d94f04 100%);
+    --grad-bg:   linear-gradient(160deg, #120d08 0%, #0a0705 60%, #150c06 100%);
+    --grad-cta:  linear-gradient(135deg, #ffab3d, #ff7a18);
+    --grad-mesh: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(217,79,4,0.20) 0%, transparent 65%),
+                 radial-gradient(ellipse 50% 40% at 20% 70%, rgba(255,171,61,0.08) 0%, transparent 60%);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  nav { display: none; }
+
+  /* HERO LOGO BADGE */
+  .hero-logo-badge {
+    display: flex; justify-content: center; align-items: center;
+    margin-bottom: 2rem;
+  }
+  .hero-logo-badge img { height: 52px; width: auto; display: block; }
+
+  /* HERO */
+  .hero-wrap { padding-top: 0; }
+  .hero {
+    min-height: 90vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: var(--grad-mesh);
+    pointer-events: none;
+    z-index: 1;
+  }
+  /* SIGNATURE: roof-pitch chevron pattern, very faint */
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(115deg, rgba(255,122,24,0.05) 1px, transparent 1px),
+      linear-gradient(65deg,  rgba(255,122,24,0.05) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 45%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 45%, black 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero-inner { position: relative; z-index: 3; max-width: 1080px; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(255,122,24,0.08);
+    border: 1px solid rgba(255,122,24,0.25);
+    border-radius: 100px;
+    padding: 0.35rem 1rem;
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 2rem;
+  }
+  .hero-badge-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--orange);
+    box-shadow: 0 0 6px var(--orange);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* WORD REVEAL HEADLINE */
+  .hero-headline {
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.022em;
+    margin-bottom: 1.6rem;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  .hero-headline .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    margin-right: 0.2em;
+  }
+  .hero-headline .word.grad {
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-headline .word.visible { opacity: 1; transform: translateY(0); }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--text-sub);
+    max-width: 620px;
+    margin: 0 auto 2.6rem;
+    line-height: 1.8;
+    opacity: 0; transform: translateY(14px);
+    transition: opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s;
+  }
+  .hero-sub.visible { opacity: 1; transform: translateY(0); }
+  .hero-sub .guarantee-highlight { color: var(--amber); font-weight: 600; }
+
+  .cta-group {
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    opacity: 0; transform: translateY(14px);
+    transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+  }
+  .cta-group.visible { opacity: 1; transform: translateY(0); }
+
+  .btn-primary {
+    background: var(--grad-cta);
+    color: #1a0d03;
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.92rem; font-weight: 800;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    padding: 1rem 2.6rem;
+    border: none; cursor: pointer; text-decoration: none;
+    border-radius: 6px;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 0 28px rgba(255,122,24,0.28);
+  }
+  .btn-primary:hover { opacity: 0.92; transform: translateY(-2px); box-shadow: 0 0 44px rgba(255,122,24,0.42); }
+  .btn-primary:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  .btn-ghost {
+    font-size: 0.82rem; color: var(--text-sub); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    border: 1px solid var(--border2);
+    padding: 0.75rem 1.8rem; border-radius: 6px; font-weight: 500;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--orange); border-color: var(--orange); }
+
+  .guarantee-line {
+    margin-top: 1.2rem;
+    font-size: 0.72rem; color: var(--text-muted);
+    letter-spacing: 0.06em;
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    opacity: 0; transition: opacity 0.7s ease 0.3s;
+  }
+  .guarantee-line.visible { opacity: 1; }
+  .guarantee-line::before { content: '\2713'; color: var(--orange); }
+
+  /* ============================================================
+     CLIENT RESULT + TESTIMONIAL STYLES — PARKED, NOT CURRENTLY USED.
+     Left in place so roofing case studies can be dropped straight
+     back in without rebuilding anything. Delete this block if you'd
+     rather keep the stylesheet lean.
+     ============================================================ */
+  .client-results {
+    padding: 5rem 3rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .client-results-label {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.7rem; justify-content: center;
+  }
+  .client-results-label::before,
+  .client-results-label::after { content: ''; display: block; width: 24px; height: 1px; background: var(--orange); }
+  .client-results-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 800; text-align: center;
+    margin-bottom: 1rem; line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .client-cards {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2rem; max-width: 1100px; margin: 0 auto;
+  }
+  .client-card {
+    background: var(--dark);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.4rem 2.6rem;
+    transition: border-color 0.3s, transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease;
+  }
+  .client-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(255,122,24,0.10);
+    border-color: rgba(255,122,24,0.35);
+  }
+  .client-card-logo { height: 80px; width: auto; object-fit: contain; margin-bottom: 1rem; display: block; }
+  .client-card-name {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1rem; font-weight: 800;
+    margin-bottom: 0.3rem; color: var(--white);
+  }
+  .client-card-industry {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 1.2rem;
+  }
+  .client-result-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(255,122,24,0.08);
+    border: 1px solid rgba(255,122,24,0.2);
+    border-radius: 100px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.7rem; font-weight: 700;
+    color: var(--amber); margin-bottom: 1.2rem;
+  }
+  .client-card-desc { font-size: 0.86rem; color: var(--text-sub); line-height: 1.75; }
+  .client-arrow-wrap {
+    background: rgba(255,122,24,0.05);
+    border: 1px solid rgba(255,122,24,0.15);
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem; margin: 1.4rem 0;
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .client-arrow { display: flex; align-items: center; gap: 0.8rem; font-size: 1rem; font-weight: 700; }
+  .client-arrow-from { color: var(--bad); font-weight: 700; font-size: 0.95rem; line-height: 1.4; }
+  .client-arrow-icon { color: var(--orange); font-size: 1.2rem; flex-shrink: 0; }
+  .client-arrow-to { color: var(--amber); font-weight: 700; font-size: 0.95rem; line-height: 1.4; }
+  .client-arrow-label {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 0.2rem;
+  }
+  .testimonial-section { padding: 6rem 3rem; text-align: center; }
+  .testimonial-single {
+    max-width: 720px; margin: 2.5rem auto 0;
+    background: var(--dark);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    padding: 3rem 2.8rem;
+    position: relative;
+    transition: box-shadow 0.8s ease, border-color 0.8s ease;
+  }
+  .testimonial-single.in-view {
+    box-shadow: 0 0 60px rgba(255,122,24,0.08);
+    border-color: rgba(255,122,24,0.32);
+  }
+  .testimonial-stars { color: var(--amber); font-size: 1.1rem; letter-spacing: 0.1em; margin-bottom: 1.4rem; }
+  .testimonial-quote { font-size: 1.08rem; color: var(--white); line-height: 1.8; font-style: italic; margin-bottom: 2rem; }
+  .testimonial-divider { width: 48px; height: 2px; background: var(--grad-cta); margin: 0 auto 1.4rem; border-radius: 2px; }
+  .testimonial-author-name { font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 1rem; margin-bottom: 0.2rem; }
+  .testimonial-author-biz  { font-family: 'Archivo', sans-serif; font-size: 0.72rem; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+  /* ===================== END PARKED STYLES ===================== */
+
+  /* SECTIONS SHARED */
+  .section { padding: 6rem 3rem; }
+  .section.alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .section-eyebrow {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.7rem;
+  }
+  /* Eyebrow mark is a roof pitch, not a plain dash */
+  .section-eyebrow::before {
+    content: ''; display: block;
+    width: 22px; height: 10px; flex-shrink: 0;
+    background: var(--orange);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%, 100% 100%, 50% 22%, 0% 100%);
+  }
+  .section-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800; line-height: 1.08;
+    margin-bottom: 1rem; letter-spacing: -0.022em;
+    position: relative; display: inline-block;
+  }
+  .section-sub { font-size: 0.92rem; color: var(--text-sub); max-width: 540px; margin-bottom: 3rem; line-height: 1.8; }
+
+  /* SYSTEM STEPS */
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  }
+  .step-card { background: var(--dark); padding: 2rem 1.6rem; transition: background 0.2s; position: relative; overflow: hidden; }
+  .step-card:hover { background: var(--surface2); }
+  .step-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px; background: var(--grad-cta);
+    transition: width 0.4s cubic-bezier(0.22,1,0.36,1);
+  }
+  .step-card:hover::after { width: 100%; }
+  .step-num {
+    font-family: 'Archivo', sans-serif; font-size: 2.8rem; font-weight: 900;
+    background: var(--grad-text);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    opacity: 0.32; line-height: 1; margin-bottom: 0.8rem;
+  }
+  .step-title { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 0.88rem; margin-bottom: 0.5rem; color: var(--white); }
+  .step-desc  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.65; }
+
+  /* PAIN */
+  .pain-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    margin-top: 2.5rem;
+  }
+  .pain-col { padding: 2.4rem; background: var(--dark); }
+  .pain-col-label {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 1.4rem; padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pain-col-label.bad  { color: var(--bad); }
+  .pain-col-label.good { color: var(--amber); }
+  .pain-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .pain-list li { font-size: 0.85rem; color: var(--text-sub); display: flex; align-items: flex-start; gap: 0.75rem; line-height: 1.55; }
+  .icon { flex-shrink: 0; margin-top: 1px; font-style: normal; }
+
+  /* FAQ */
+  .faq-list { margin-top: 2.5rem; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 1.4rem 0; }
+  .faq-q { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 0.92rem; margin-bottom: 0.6rem; display: flex; justify-content: space-between; align-items: center; }
+  .faq-q::after { content: '+'; color: var(--orange); font-size: 1.2rem; flex-shrink: 0; margin-left: 1rem; }
+  .faq-a { font-size: 0.84rem; color: var(--text-sub); line-height: 1.8; max-width: 700px; }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 8rem 3rem; text-align: center;
+    position: relative; overflow: hidden;
+    border-top: 1px solid var(--border);
+    background: var(--grad-bg);
+  }
+  .final-cta::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(217,79,4,0.22) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .final-cta::after {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(115deg, rgba(255,122,24,0.045) 1px, transparent 1px),
+      linear-gradient(65deg,  rgba(255,122,24,0.045) 1px, transparent 1px);
+    background-size: 42px 42px;
+    pointer-events: none;
+  }
+  .final-cta-inner { position: relative; z-index: 2; }
+  .final-cta h2 {
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(2rem, 4.5vw, 3.6rem);
+    font-weight: 900; line-height: 1.08;
+    max-width: 780px; margin: 0 auto 1.4rem;
+    letter-spacing: -0.025em; text-transform: uppercase;
+  }
+  .final-cta p { font-size: 0.95rem; color: var(--text-sub); max-width: 500px; margin: 0 auto 2.5rem; }
+
+  /* FOOTER */
+  footer {
+    padding: 1.8rem 3rem;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+    background: var(--dark);
+  }
+  footer p { font-size: 0.72rem; color: var(--text-muted); max-width: 680px; }
+  footer img { height: 40px; width: auto; }
+
+  /* BOOKING */
+  .booking-section {
+    padding: 6rem 3rem;
+    background: var(--dark);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .booking-inner { max-width: 980px; margin: 0 auto; }
+  .booking-title {
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800; line-height: 1.08;
+    margin-bottom: 1rem; letter-spacing: -0.022em;
+  }
+  .booking-sub { font-size: 0.95rem; color: var(--text-sub); max-width: 540px; margin: 0 auto 2.5rem; line-height: 1.8; }
+  .booking-widget-wrap { background: transparent; border: none; overflow: hidden; }
+  .booking-iframe { width: 100%; border: none; display: block; background: transparent; min-height: 700px; }
+
+  /* HERO CANVAS */
+  #heroBgCanvas {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    z-index: 0; pointer-events: none; opacity: 1;
+  }
+  .hero { background: transparent !important; }
+
+  /* SCROLL-REVEAL BASE STATES */
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1); }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .reveal-card { opacity: 0; transform: translateY(28px) scale(0.97); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+  .reveal-card.in-view { opacity: 1; transform: translateY(0) scale(1); }
+  .reveal-fade { opacity: 0; transition: opacity 0.9s ease; }
+  .reveal-fade.in-view { opacity: 1; }
+  .reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1); }
+  .reveal-left.in-view { opacity: 1; transform: translateX(0); }
+  .reveal-right { opacity: 0; transform: translateX(28px); transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1); }
+  .reveal-right.in-view { opacity: 1; transform: translateX(0); }
+
+  .delay-1 { transition-delay: 0.08s !important; }
+  .delay-2 { transition-delay: 0.16s !important; }
+  .delay-3 { transition-delay: 0.24s !important; }
+  .delay-4 { transition-delay: 0.32s !important; }
+  .delay-5 { transition-delay: 0.40s !important; }
+  .delay-6 { transition-delay: 0.48s !important; }
+
+  /* PAIN LIST STAGGER */
+  .pain-list li { opacity: 0; transform: translateX(-16px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .pain-col.in-view .pain-list li { opacity: 1; transform: translateX(0); }
+  .pain-col.in-view .pain-list li:nth-child(1) { transition-delay: 0.05s; }
+  .pain-col.in-view .pain-list li:nth-child(2) { transition-delay: 0.12s; }
+  .pain-col.in-view .pain-list li:nth-child(3) { transition-delay: 0.19s; }
+  .pain-col.in-view .pain-list li:nth-child(4) { transition-delay: 0.26s; }
+  .pain-col.in-view .pain-list li:nth-child(5) { transition-delay: 0.33s; }
+  .pain-col.in-view .pain-list li:nth-child(6) { transition-delay: 0.40s; }
+
+  .faq-item { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .faq-item.in-view { opacity: 1; transform: translateY(0); }
+
+  /* BUTTON SHIMMER */
+  .btn-primary { position: relative; overflow: hidden; }
+  .btn-primary::after {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.20), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer 3.5s infinite;
+  }
+  @keyframes shimmer { 0% { left: -100%; } 60% { left: 160%; } 100% { left: 160%; } }
+
+  /* VSL */
+  .vsl-wrap {
+    width: 100%; max-width: 800px; margin: 0 auto 2.6rem;
+    opacity: 0; transform: translateY(14px);
+    transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+  }
+  .vsl-wrap.visible { opacity: 1; transform: translateY(0); }
+  .vsl-wrap wistia-player { display: block; width: 100%; border-radius: 12px; overflow: hidden; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .section { padding: 3.5rem 1.4rem; }
+    .client-results { padding: 3.5rem 1.4rem; }
+    .client-cards { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .testimonial-section { padding: 3.5rem 1.4rem; }
+    .testimonial-single { padding: 2rem 1.6rem; }
+    .booking-section { padding: 3.5rem 1.4rem; }
+    footer { padding: 1.4rem; }
+    .final-cta { padding: 4rem 1.4rem; }
+  }
+
+  /* ACCESSIBILITY */
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .reveal, .reveal-card, .reveal-fade, .reveal-left, .reveal-right,
+    .hero-headline .word, .hero-sub, .cta-group, .guarantee-line,
+    .vsl-wrap, .pain-list li, .faq-item {
+      opacity: 1 !important; transform: none !important;
+    }
+    #heroBgCanvas { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-logo-badge">
+        <img src="https://assets.cdn.filesafe.space/YapgZpEE87fnHWFSfSRe/media/69f5b189dd67e758c09fe4ad.png" alt="UpScaler HQ">
+      </div>
+
+      <!-- ============================================================
+           OFFER COPY — THE $100K / 90-DAY GUARANTEE.
+           This wording appears in three places: the headline below,
+           the hero sub, and the guarantee FAQ. Keep them IDENTICAL to
+           each other and to what the service agreement says.
+           Note the framing: it is a promise about what WE do if the
+           number isn't hit — not a claim that $100k is a typical
+           result. Keep it that way.
+           ============================================================ -->
+      <h1 class="hero-headline" id="heroHeadline">
+        <span class="word">An</span>
+        <span class="word">Extra</span>
+        <span class="word">$100K</span>
+        <span class="word">In</span>
+        <span class="word">90</span>
+        <span class="word">Days.</span>
+        <span class="word grad">Or</span>
+        <span class="word grad">We</span>
+        <span class="word grad">Keep</span>
+        <span class="word grad">Working</span>
+        <span class="word grad">Free.</span>
+      </h1>
+
+      <p class="hero-sub" id="heroSub">
+        Most agencies just run ads. We install the whole engine — qualified homeowner leads, inspections booked straight into your diary, and quote follow-up that keeps going until they sign or say no.
+        <span class="guarantee-highlight"> If your roofing business doesn't do an extra $100,000 in the first 90 days, we keep working free until you get there.</span>
+      </p>
+
+      <!-- Wistia VSL Embed -->
+      <div class="vsl-wrap" id="heroVsl">
+        <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/5m7a61dsyr.js" async type="module"></script><style>wistia-player[media-id='5m7a61dsyr']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/5m7a61dsyr/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+        <wistia-player media-id="5m7a61dsyr" aspect="1.7777777777777777"></wistia-player>
+      </div>
+
+      <div class="cta-group" id="heroCta">
+        <a class="btn-primary" href="#booking">Show Me The System &#8594;</a>
+      </div>
+
+      <p class="guarantee-line" id="heroGuarantee">
+        Built for roofing. No generic agency fluff. Just booked jobs.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING CALENDAR -->
+<section class="booking-section" id="booking">
+  <div class="booking-inner">
+    <p class="section-eyebrow reveal-fade" style="justify-content:center;">Book Your Call</p>
+    <h2 class="booking-title reveal">Pick A Time That <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Works For You</span></h2>
+    <p class="booking-sub reveal delay-1">Grab a free 45-minute strategy slot below. No pressure, no pitch deck — just a straight conversation about where your roofing jobs are actually coming from.</p>
+    <div class="booking-widget-wrap reveal delay-2">
+      <iframe src="https://link.upscalerhq.com/widget/booking/V3kgsojQo0kgy1vPbMYT" class="booking-iframe" scrolling="no" title="Book a strategy call" id="12hWZCCXZfHKWOj8EPqe_1781276165968"></iframe>
+      <script src="https://link.upscalerhq.com/js/form_embed.js" type="text/javascript"></script>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROOF SECTIONS REMOVED (client results + testimonial).
+     The CSS for both is parked in the stylesheet above, so a roofing
+     case study can be dropped back in right here without rebuilding
+     anything.
+     ============================================================ -->
+
+<!-- SYSTEM -->
+<section class="section" id="system">
+  <p class="section-eyebrow reveal-fade">The Booked-Out System</p>
+  <h2 class="section-title reveal">Five Components. <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">One Complete Machine.</span></h2>
+  <p class="section-sub reveal delay-1">Roofing companies don't lose money on the roof. They lose it between the enquiry and the signed quote. We connect the full chain — from a homeowner seeing your ad to the deposit landing.</p>
+  <div class="steps-grid">
+    <div class="step-card reveal-card delay-1">
+      <div class="step-num">01</div>
+      <p class="step-title">Localised Paid Ads</p>
+      <p class="step-desc">Ads built for restorations, re-roofs, leak repairs and gutter work — targeting homeowners inside your actual service radius, not three hours away.</p>
+    </div>
+    <div class="step-card reveal-card delay-2">
+      <div class="step-num">02</div>
+      <p class="step-title">Lead Qualification</p>
+      <p class="step-desc">Every enquiry is screened before it hits your phone — owner or renter, roof type, property age, timeframe. You stop driving out to quote people who were never going to buy.</p>
+    </div>
+    <div class="step-card reveal-card delay-3">
+      <div class="step-num">03</div>
+      <p class="step-title">Speed-To-Lead Follow-Up</p>
+      <p class="step-desc">Automated SMS hits within minutes of the enquiry. Homeowners ring three roofers. The first one to respond usually gets the inspection.</p>
+    </div>
+    <div class="step-card reveal-card delay-4">
+      <div class="step-num">04</div>
+      <p class="step-title">Inspections Booked In</p>
+      <p class="step-desc">Site inspections land straight in your diary with the address, contact details and job type attached — plus automated reminders so you're not driving out to an empty house.</p>
+    </div>
+    <div class="step-card reveal-card delay-5">
+      <div class="step-num">05</div>
+      <p class="step-title">Quote Chasing &amp; Reactivation</p>
+      <p class="step-desc">Roofing quotes get sat on for weeks. Every unsigned quote gets followed up automatically, and your old quote database gets reactivated on a schedule.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="section alt" id="pain">
+  <p class="section-eyebrow reveal-fade">The Real Problem</p>
+  <h2 class="section-title reveal">Your Roofing Isn't The Problem.</h2>
+  <p class="section-sub reveal delay-1">Talk to enough roofing companies and the same thing comes up every time: the workmanship is there, the crew is there. The system to keep the diary full — and to stop quotes going cold — is not.</p>
+  <div class="pain-grid">
+    <div class="pain-col">
+      <p class="pain-col-label bad">&#10005; Without a system</p>
+      <ul class="pain-list">
+        <li><i class="icon" style="color:#f87171;">&#10005;</i>Flat out after a storm, dead quiet three weeks later</li>
+        <li><i class="icon" style="color:#f87171;">&#10005;</i>Relying entirely on referrals, repeat work and hope</li>
+        <li><i class="icon" style="color:#f87171;">&#10005;</i>Half a day burned quoting renters and tyre kickers</li>
+        <li><i class="icon" style="color:#f87171;">&#10005;</i>Quotes sent, then silence — and no one chases them</li>
+        <li><i class="icon" style="color:#f87171;">&#10005;</i>Getting undercut by door-knockers and one-man bands</li>
+        <li><i class="icon" style="color:#f87171;">&#10005;</i>No idea which jobs came from which marketing dollar</li>
+      </ul>
+    </div>
+    <div class="pain-col">
+      <p class="pain-col-label good">&#10003; With the UpScaler HQ System</p>
+      <ul class="pain-list">
+        <li><i class="icon" style="color:#ffab3d;">&#10003;</i>Qualified homeowner leads landing every week, storm or not</li>
+        <li><i class="icon" style="color:#ffab3d;">&#10003;</i>Inspections booked into the diary while you're on a roof</li>
+        <li><i class="icon" style="color:#ffab3d;">&#10003;</i>Every lead contacted within minutes, automatically</li>
+        <li><i class="icon" style="color:#ffab3d;">&#10003;</i>Renters and time-wasters filtered out before you drive out</li>
+        <li><i class="icon" style="color:#ffab3d;">&#10003;</i>Unsigned quotes chased until they sign or say no</li>
+        <li><i class="icon" style="color:#ffab3d;">&#10003;</i>Clear numbers on what every dollar of ad spend returns</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section alt">
+  <p class="section-eyebrow reveal-fade">Common Questions</p>
+  <h2 class="section-title reveal">Straight Answers.</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <p class="faq-q">I've tried roofing leads before and got nothing but tyre kickers.</p>
+      <p class="faq-a">Shared lead sellers send the same enquiry to four roofers and let you fight over it. That's not what this is. These are your leads, exclusively, qualified on ownership, roof type and timeframe before they reach your phone — and followed up within minutes instead of hours.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">My area is packed with roofers. Will this still work?</p>
+      <p class="faq-a">Competition confirms the demand is there. The roofers losing work in busy markets are the ones taking six hours to return a call and never chasing a quote. When you respond first, qualify properly and follow up consistently, you pick up the jobs your competitors let go cold.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I'm on the tools all day. I don't have time for another platform.</p>
+      <p class="faq-a">The system runs without you. Leads are captured and qualified automatically, follow-up is automated, and the CRM manages the pipeline. Your job is turning up to the inspection and doing the work. We handle the rest.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What's the guarantee exactly?</p>
+      <!-- MUST MATCH the hero copy and the service agreement. -->
+      <p class="faq-a">If your roofing business doesn't do an extra $100,000 in revenue within the first 90 days of your campaign going live, we keep working free until you get there. It isn't a refund — it's us continuing to run the system at no additional charge until the number is hit. The risk sits with us.</p>
+    </div>
+    <div class="faq-item">
+      <!-- ============================================================
+           I ADDED THIS ONE — you didn't ask for it. Delete it if you
+           don't want it. It's here because "an extra $100k" is
+           unarguable in both directions until you define how it's
+           measured, and that cuts against you as much as the client.
+           Edit the wording to match whatever your agreement says.
+           ============================================================ -->
+      <p class="faq-q">How is the extra $100,000 measured?</p>
+      <p class="faq-a">Revenue from jobs that came through the system — tracked in your CRM from first enquiry through to signed job, so we're both looking at the same number. Your existing referral and repeat work isn't counted toward it. We agree the baseline and the tracking before anything goes live, so there's nothing to argue about on day 91.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How long before I see actual jobs?</p>
+      <p class="faq-a">Most clients see their first enquiries within the first week of campaigns going live. Roofing has a longer sales cycle than most trades — inspection, quote, then a decision — so a consistently full diary typically develops across 30 to 60 days depending on your market and ad budget.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="cta">
+  <div class="final-cta-inner">
+    <p class="section-eyebrow reveal-fade" style="justify-content:center; margin-bottom:0.8rem;">Ready To Fill The Diary?</p>
+    <h2 class="reveal">Stop Wondering Where The <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Next Roof</span> Is Coming From.</h2>
+    <p class="reveal delay-1">Book a free 45-minute strategy call. We'll look at where your leads come from now, find where quotes are going cold, and show you what an extra $100,000 in 90 days would actually take in your market.</p>
+    <a class="btn-primary" href="#booking" style="font-size:0.95rem;padding:1.1rem 2.8rem;margin:0 auto;">Book My Free Strategy Call &#8594;</a>
+    <p class="guarantee-line" style="justify-content:center;margin-top:1.4rem;opacity:1;">No pressure. No pitch deck. A straight conversation about your business.</p>
+  </div>
+</section>
+
+<footer>
+  <img src="https://assets.cdn.filesafe.space/YapgZpEE87fnHWFSfSRe/media/69f5b189dd67e758c09fe4ad.png" alt="UpScaler HQ">
+  <p>The $100,000 figure is a performance guarantee, not a representation of typical results. If it isn't reached within 90 days we continue working at no additional charge until it is. Outcomes vary based on market, ad budget, pricing, capacity and how quickly leads are followed up. Full terms are set out in the service agreement.</p>
+</footer>
+
+<script>
+  /* ============================================================
+     ANIMATED HERO BACKGROUND — Rising Embers
+     Warm particles drifting upward, like dust in a work light.
+     ============================================================ */
+  (function() {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+
+    var hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    var canvas = document.createElement('canvas');
+    canvas.id = 'heroBgCanvas';
+    canvas.setAttribute('aria-hidden', 'true');
+    hero.insertBefore(canvas, hero.firstChild);
+    var ctx = canvas.getContext('2d');
+    var W = 0, H = 0;
+
+    var COUNT = 55;
+    var nodes = [];
+
+    var palette = [
+      [255, 171, 61],   /* amber */
+      [255, 122, 24],   /* orange */
+      [217, 79,  4],    /* ember */
+      [255, 200, 130]   /* pale spark */
+    ];
+
+    for (var i = 0; i < COUNT; i++) {
+      var isBright = Math.random() < 0.20;
+      nodes.push({
+        x:  Math.random() * (window.innerWidth || 1200),
+        y:  Math.random() * 700,
+        vx: (Math.random() - 0.5) * 0.10,
+        vy: -(0.10 + Math.random() * 0.22),
+        r:  isBright ? 1.6 + Math.random() * 1.3 : 0.5 + Math.random() * 0.9,
+        col: palette[Math.floor(Math.random() * palette.length)],
+        opacity: isBright ? 0.70 + Math.random() * 0.25 : 0.18 + Math.random() * 0.26,
+        phase: Math.random() * Math.PI * 2,
+        phaseSpeed: 0.010 + Math.random() * 0.014
+      });
+    }
+
+    var glows = [
+      { x: 0.74, y: 0.32, r: 0.46, col: [217,79,4],   a: 0.11 },
+      { x: 0.16, y: 0.74, r: 0.34, col: [255,171,61], a: 0.06 }
+    ];
+
+    function resize() {
+      W = canvas.width  = hero.offsetWidth;
+      H = canvas.height = hero.offsetHeight;
+      nodes.forEach(function(n) {
+        n.x = Math.random() * W;
+        n.y = Math.random() * H;
+      });
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      glows.forEach(function(g) {
+        var gx = g.x * W, gy = g.y * H, gr = g.r * W;
+        var rg = ctx.createRadialGradient(gx, gy, 0, gx, gy, gr);
+        rg.addColorStop(0,   'rgba(' + g.col[0] + ',' + g.col[1] + ',' + g.col[2] + ',' + g.a + ')');
+        rg.addColorStop(0.5, 'rgba(' + g.col[0] + ',' + g.col[1] + ',' + g.col[2] + ',' + (g.a * 0.35) + ')');
+        rg.addColorStop(1,   'rgba(' + g.col[0] + ',' + g.col[1] + ',' + g.col[2] + ',0)');
+        ctx.beginPath();
+        ctx.arc(gx, gy, gr, 0, Math.PI * 2);
+        ctx.fillStyle = rg;
+        ctx.fill();
+      });
+
+      nodes.forEach(function(n) {
+        n.x += n.vx;
+        n.y += n.vy;
+        /* Wrap: rise off the top, re-enter from the bottom */
+        if (n.y < -12) { n.y = H + 12; n.x = Math.random() * W; }
+        if (n.x < -12) n.x = W + 12;
+        if (n.x > W + 12) n.x = -12;
+        n.phase += n.phaseSpeed;
+      });
+
+      nodes.forEach(function(n) {
+        var flicker = 0.68 + 0.32 * Math.sin(n.phase);
+        var a = n.opacity * flicker;
+
+        if (n.r > 1.4) {
+          var halo = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 6);
+          halo.addColorStop(0, 'rgba(' + n.col[0] + ',' + n.col[1] + ',' + n.col[2] + ',' + (a * 0.45) + ')');
+          halo.addColorStop(1, 'rgba(' + n.col[0] + ',' + n.col[1] + ',' + n.col[2] + ',0)');
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r * 6, 0, Math.PI * 2);
+          ctx.fillStyle = halo;
+          ctx.fill();
+        }
+
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + n.col[0] + ',' + n.col[1] + ',' + n.col[2] + ',' + a + ')';
+        ctx.fill();
+      });
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+
+  /* ============================================================
+     WORD-BY-WORD HERO HEADLINE REVEAL
+     ============================================================ */
+  window.addEventListener('load', function() {
+    var words = document.querySelectorAll('#heroHeadline .word');
+    words.forEach(function(word, i) {
+      setTimeout(function() { word.classList.add('visible'); }, 120 + i * 95);
+    });
+
+    var delay = 120 + words.length * 95;
+    var show = function(id, d) {
+      setTimeout(function() {
+        var el = document.getElementById(id);
+        if (el) el.classList.add('visible');
+      }, d);
+    };
+    show('heroSub', delay);
+    show('heroVsl', delay + 60);
+    show('heroCta', delay + 120);
+    show('heroGuarantee', delay + 240);
+  });
+
+  /* ============================================================
+     INTERSECTION OBSERVER — scroll-triggered reveals
+     ============================================================ */
+  (function() {
+    var options = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    var selectors = [
+      '.reveal', '.reveal-card', '.reveal-fade',
+      '.reveal-left', '.reveal-right',
+      '.testimonial-single', '.pain-col', '.faq-item'
+    ];
+
+    document.querySelectorAll(selectors.join(',')).forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+
+  /* ============================================================
+     NAV transparent-to-solid on scroll — null-guarded
+     ============================================================ */
+  (function() {
+    var nav = document.querySelector('nav');
+    if (!nav) return;
+    function handleScroll() {
+      if (window.scrollY > 30) { nav.classList.add('scrolled'); }
+      else { nav.classList.remove('scrolled'); }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  })();
+</script>
+
+</body>
+</html>
